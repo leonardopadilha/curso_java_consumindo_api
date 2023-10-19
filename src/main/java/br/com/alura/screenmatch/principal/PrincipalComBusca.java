@@ -42,8 +42,8 @@ public class PrincipalComBusca {
             String token = "&apikey=d6baff43";
 
             String url = endereco + busca.replace(" ", "+") + token;
-            // Pesquisar pela class Url Encoder
-            // Pesquisar / Procurar por --> multi-catch
+            // Pesquisar / Estudar -> pela class Url Encoder
+            // Pesquisar / Estudar -> Procurar por --> multi-catch
 
             try {
                 HttpClient client = HttpClient.newHttpClient();
