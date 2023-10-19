@@ -35,7 +35,6 @@ public class Principal {
                 System.out.println("Numero invalido");
             }
         }
-
         System.out.println("Programa finalizado com sucesso!!");
     }
 }
