@@ -46,7 +46,7 @@ public class App {
             System.out.println(acompanhante.getNome() + " - " + acompanhante.isConfirmouCadastro());
         }
 
-        ViagemNacional viagemNacional = new ViagemNacional(Destinos.GOIAS);
+        ViagemNacional viagemNacional = new ViagemNacional(Destinos.MARINGA);
 
         try {
             viagemNacional.setAcompanhantes(acompanhantes);
@@ -56,7 +56,7 @@ public class App {
 
         viagemNacional.setCpf("12345678910");
 
-        ViagemInternacional viagemInternacional = new ViagemInternacional(Destinos.MIAMI);
+        ViagemInternacional viagemInternacional = new ViagemInternacional(Destinos.ACAPULCO);
 
         try {
             viagemInternacional.setAcompanhantes(acompanhantes);
@@ -68,5 +68,7 @@ public class App {
 
         System.out.println(viagemNacional.getDestino());
         System.out.println(viagemInternacional.getDestino().getCidade());
+        System.out.println(viagemInternacional.calcularPrevisaoDeDiasParaRetorno());
+        System.out.println(viagemNacional.calcularPrevisaoDeDiasParaRetorno());
     }
 }
