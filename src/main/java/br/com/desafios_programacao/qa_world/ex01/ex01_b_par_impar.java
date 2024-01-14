@@ -1,4 +1,4 @@
-package br.com.desafios_programacao.qa_world;
+package br.com.desafios_programacao.qa_world.ex01;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class ex01_b_par_impar {
 
         int numParOuImpar = numero.nextInt();
 
-        System.out.println(informaNumeroParOuImpar(numParOuImpar));;
+        System.out.println(informaNumeroParOuImpar(numParOuImpar));
 
     }
 

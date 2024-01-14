@@ -1,4 +1,4 @@
-package br.com.desafios_programacao.qa_world;
+package br.com.desafios_programacao.qa_world.ex01;
 
 import java.util.Scanner;
 
