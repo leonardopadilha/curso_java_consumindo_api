@@ -1,13 +1,12 @@
 package br.com.dtar.dto;
 
 import br.com.dtar.enums.Destinos;
+import br.com.dtar.interfaces.CalculadoraDePrevisao;
 import br.com.dtar.utils.ArquivosUtils;
 
-import java.io.FileInputStream;
 import java.util.List;
-import java.util.Properties;
 
-public class ViagemNacional extends Viagem {
+public class ViagemNacional extends Viagem implements CalculadoraDePrevisao {
 
     private String cpf;
 
@@ -34,5 +33,23 @@ public class ViagemNacional extends Viagem {
             throw new Exception("Viagens nacionais não podem ter mais que " +  limiteDeAcompanhantes + " acompanhante");
         }
 
+    }
+
+    @Override
+    public int calcularPrevisaoDeDiasParaRetorno() {
+        int quantidadeDeDias = 0;
+        switch (this.getDestino()) {
+            case MANAUS: quantidadeDeDias = 4;
+                break;
+            case RECIFE: quantidadeDeDias = 3;
+                break;
+            case GOIAS: quantidadeDeDias = 2;
+                break;
+            case MARINGA: quantidadeDeDias = 1;
+                break;
+            case OSASCO: quantidadeDeDias = 0;
+                break;
+        }
+        return quantidadeDeDias;
     }
 }
